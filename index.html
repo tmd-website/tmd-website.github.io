@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.min.js"></script>
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <title>Offline Goal Conditioned Reinforcement Learning with Temporal Distance Representations</title>
+
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg.js"></script>
+    <script>
+      function selectContent(query) {
+        var range = document.createRange()
+        var selection = window.getSelection()
+        var elem = document.querySelector(query)
+        range.selectNodeContents(elem)
+        selection.removeAllRanges()
+        selection.addRange(range)
+      }
+    </script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true,
+          macros: {
+            S: "\\mathcal{S}",
+            A: "\\mathcal{A}",
+            D: "\\mathcal{D}",
+            R: "\\mathbb{R}",
+            E: "\\mathbb{E}",
+            P: "\\mathrm{P}",
+            var: "\\mathrm{Var}",
+            cov: "\\mathrm{Cov}",
+            argmin: "\\mathop{\\arg\\min}",
+            argmax: "\\mathop{\\arg\\max}",
+          },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      }
+    </script>
+    <header>
+      <h1>Offline Goal Conditioned Reinforcement Learning with Temporal Distance Representations</h1>
+      <div class="authors">
+        <span class="author">Anonymous Authors</span>
+        <span class="affil">1</span>
+      </div>
+      <div class="notes">
+        <span class="affil">1</span>
+        <span class="institution">Anonymous Institution</span>
+      </div>
+      <div class="links">
+        <span class="link">
+          <a href="./static/pdf/example.pdf" target="_blank" class="button">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+          </a>
+        </span>
+        <span class="link">
+          <a href="TODO" class="button">
+            <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+          </a>
+        </span>
+        <span class="link">
+          <a href="https://github.com/TODO" class="button">
+            <span class="icon"><i class="fas fa-code"></i></span><span>Code</span>
+          </a>
+        </span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="summary">
+          <video id="overview" controls="" width="99%" poster="./static/videos/overview.png">
+            <source src="static/videos/overview.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="wide abstract">
+            <h3>Abstract</h3>
+            <p>
+              Nam tristique lectus nisl, tempor volutpat libero tincidunt quis. Aenean vitae
+              tincidunt arcu. Aliquam a porttitor augue, quis lobortis urna. Vestibulum sit amet
+              tincidunt nisl. Proin vel ante hendrerit, tempor tortor vitae, mollis leo. Integer mi
+              nisl, malesuada sed risus ac, rhoncus hendrerit velit. Etiam convallis suscipit diam
+              ut laoreet. Aliquam erat volutpat. Curabitur dolor dolor, pulvinar a lectus mollis,
+              egestas consectetur elit. Donec eget pellentesque augue, at ullamcorper massa. Sed
+              dapibus vehicula leo, iaculis vulputate neque ornare vitae.
+            </p>
+          </div>
+          <div class="thin vertical">
+            <img src="static/figures/img2.svg" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Method</h2>
+        <p>
+          Proin efficitur vehicula justo vel varius. Pellentesque habitant morbi tristique senectus
+          et netus et malesuada fames ac turpis egestas. Nunc nunc odio, iaculis non sapien non,
+          semper cursus metus. Vivamus pellentesque vitae nulla eget commodo. Sed at massa vitae
+          urna fringilla mollis. Sed vestibulum semper risus sit amet dictum. Donec et maximus
+          turpis. Praesent congue ante sit amet ex bibendum dapibus. Suspendisse rutrum, purus eu
+          faucibus sollicitudin, odio libero consectetur est, eget facilisis libero odio ac nisl.
+          Fusce fringilla, dui sed aliquet varius, ex sapien ullamcorper erat, a feugiat nibh orci
+          vitae nisl. Nam dapibus arcu nisi, nec efficitur dolor ullamcorper nec. Praesent lacus
+          leo, interdum id consectetur a, egestas id purus. Cras tincidunt dolor elementum elit
+          gravida, id faucibus dolor suscipit. Sed volutpat elementum turpis, eleifend imperdiet
+          lorem tincidunt quis.
+        </p>
+        <div class="columns">
+          <div class="wide">
+            <img src="static/figures/img1.svg" />
+          </div>
+          <div class="thin">
+            <p>
+              <b>Figure.</b>
+              Ut placerat tellus odio, eget fermentum magna tincidunt a. Aliquam at fermentum nunc.
+              Proin odio sapien, ultrices vel massa ut, vehicula tincidunt augue. Fusce quis erat
+              sed quam euismod porttitor nec vel nunc. In id sem posuere urna euismod ultrices. Nam
+              pharetra pharetra ipsum, et commodo augue facilisis eu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Analysis</h2>
+        <div class="theorem">
+          <span>Theorem 1</span>
+          <span>Theoretical Result</span>
+          Vivamus mi quam, vehicula quis leo commodo, efficitur dignissim diam. Mauris sollicitudin
+          sapien sem, non sagittis mauris tincidunt in.
+        </div>
+        <p>
+          Integer viverra dapibus tempor. Morbi ac orci lorem. Aliquam nec ligula ipsum. Praesent at
+          tempor nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+          ridiculus mus. Sed dapibus, lectus finibus volutpat dictum, ipsum tortor rhoncus nisl,
+          eget ullamcorper turpis erat id felis.
+        </p>
+      </section>
+
+      <section>
+        <h2>Visualization</h2>
+        <div class="margin">
+          <img src="static/figures/img1.svg" />
+          <p class="caption">
+            <b>Figure.</b>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+            Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+            placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum
+            erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit
+            eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+            Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+            faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat
+            volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Results</h2>
+        <div class="columns">
+          <div class="half">
+            <img src="static/figures/img3.svg" />
+            <p class="caption">
+              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+              egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+              placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Eget
+              tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+            </p>
+          </div>
+          <div class="half">
+            <img src="static/figures/img3.svg" />
+            <p class="caption">
+              Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+              libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+              eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat
+              wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>
+          ${\bf B\kern-.05em{\small I\kern-.025em B}\kern-.08em
+          T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}$
+        </h2>
+        <pre
+          class="language-bibtex bibtex"
+          id="bibtex"
+          onclick="selectContent('#bibtex')"><code>@misc{TODO,
+  TODO
+}</code></pre>
+      </section>
+    </main>
+  </body>
+</html>
