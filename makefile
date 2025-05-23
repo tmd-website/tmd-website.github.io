@@ -1,4 +1,4 @@
-name =
+name = tmd
 slides = 
 
 all: $(shell perl hdeps.pl index.html)
