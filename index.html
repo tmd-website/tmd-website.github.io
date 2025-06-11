@@ -186,15 +186,42 @@
                 <h2>Empirical Evaluation</h2>
                 <figure>
                     <div class="columns centered">
-                        <div class="wide">
+                        <div class="wide top">
                             <img src="static/figures/eval-table.svg" />
                         </div>
-                        <div class="margin half">
+                        <div class="top third">
+                            <figure>
+                                <div class="small margin">
+                                    <video autoplay loop muted playsinline>
+                                        <source src="static/videos/humanoid-traj.mov" type="video/mp4" />
+                                    </video>
+                                </div>
+                                <figcaption title="Figure">
+                                    Example trajectory in the <code>humanoid</code> environment.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </figure>
+                <hr />
+                <figure>
+                    <div class="columns centered">
+                        <div class="half">
                             <img src="static/figures/ablations.svg" />
-                            <figcaption title="Figure">
-                                We ablate the loss components of TMD in the
-                                <code>pointmaze_teleport_stitch</code> environment.
-                            </figcaption>
+                            <div class="bottom">
+                                <figcaption title="Figure">
+                                    We ablate the loss components of TMD in the
+                                    <code>pointmaze_teleport_stitch</code> environment.
+                                </figcaption>
+                            </div>
+                        </div>
+                        <div class="half">
+                            <img src="static/figures/t_ablation.pdf" />
+                            <div class="bottom">
+                                <figcaption title="Figure">
+                                    Ablating the objectives in the $\mathcal{T}$-backup experiment.
+                                </figcaption>
+                            </div>
                         </div>
                     </div>
                 </figure>

@@ -287,6 +287,13 @@ div.columns > div {
   margin-right: auto;
   flex: 0 1 auto;
 }
+div.columns > .fifth {
+  flex-basis: 16%;
+}
+
+div.columns > .quarter {
+  flex-basis: 20%;
+}
 
 div.columns > .third {
   flex-basis: 30%;
@@ -302,6 +309,10 @@ div.columns > .half {
 
 div.columns > .wide {
   flex-basis: 60%;
+}
+
+div.columns > .two-thirds {
+  flex-basis: 66%;
 }
 
 div.columns > .full {
@@ -333,6 +344,13 @@ section + section {
   padding-top: 1em 0;
   padding-right: 1em;
   padding-left: 1em;
+}
+
+hr {
+  border: none;
+  border-top: 4px solid #ddd;
+  margin: 2ex auto;
+  width: 30%;
 }
 
 div.theorem {
