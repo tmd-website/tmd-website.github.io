@@ -138,13 +138,19 @@
                         dynamics.
                     </figcaption>
                 </figure>
+                
                 <div class="margin figure">
                     <img src="static/figures/algo.svg" />
+                </div>
+                <details>
+                    <summary>Full Implementation</summary>
+
                     <div class="margin">
                         <img src="static/figures/full_loss.svg" />
                         <img src="static/figures/loss_components.svg" />
                     </div>
-                </div>
+                </details>
+                <p>To learn a policy from this distance parameterization, we can simply use any off-the-shelf policy extraction method and minimize actor loss parameterized as: $\min_{\pi} \mathbb{E}_{\{s_{i},a_{i},s_{i}',g_{i}\}_{i=1}^{N} \sim \pi_{\beta}} \Bigl[ \sum_{i,j=1}^{N} d_{\theta}\bigl((s_{i},\pi(s_{i},g_{j})),g_{j}\bigr) \Bigr]$. </p>
             </section>
 
             <!-- <section> -->
@@ -183,7 +189,13 @@
             <!-- </section> -->
 
             <section>
+                <h2>What do these invariances mean?</h2>
+                <p>An ideal distance metric should obey two properties: </p>
+            </section>
+
+            <section>
                 <h2>Empirical Evaluation</h2>
+                <p>We evaluate TMD on OGBench, and we observe that TMD outperforms other methods in a variety of locomotion and manipulation tasks. </p>
                 <figure>
                     <div class="columns centered">
                         <div class="wide top">
