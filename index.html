@@ -150,7 +150,7 @@
                         <img src="static/figures/loss_components.svg" />
                     </div>
                 </details>
-                <p>To learn a policy from this distance parameterization, we can simply use any off-the-shelf policy extraction method and minimize actor loss parameterized as: $\min_{\pi} \mathbb{E}_{\{s_{i},a_{i},s_{i}',g_{i}\}_{i=1}^{N} \sim \pi_{\beta}} \Bigl[ \sum_{i,j=1}^{N} d_{\theta}\bigl((s_{i},\pi(s_{i},g_{j})),g_{j}\bigr) \Bigr]$. </p>
+                <p>To learn a policy from this distance parameterization, we can simply use off-the-shelf policy extraction method and minimize actor loss: $\pi = \min_{\pi} \mathbb{E}_{\{s_{i},a_{i},s_{i}',g_{i}\}_{i=1}^{N} \sim \pi_{\beta}} \Bigl[ \sum_{i,j=1}^{N} d_{\theta}\bigl((s_{i},\pi(s_{i},g_{j})),g_{j}\bigr) \Bigr]$. </p>
             </section>
 
             <!-- <section> -->
@@ -189,8 +189,16 @@
             <!-- </section> -->
 
             <section>
-                <h2>What do these invariances mean?</h2>
-                <p>An ideal distance metric should obey two properties: </p>
+                <h2>What Do These Invariances Mean?</h2>
+                <p>An ideal distance metric should obey two properties: the <i>triangle inequality</i> and <i>action invariance</i>. We start by assuming that temporal distances between a pair of (state, action) and goal should be proportional to the optimal Q value</p>
+                <p>The temporal $\mathcal{T}$-invariance is represents Bellman consistency in temporal distance learning. We do so by regressing the </p>
+                <p>The optimal value function of a state is the maximum over all possible actions: $V^{*}(s) = \max_{a \in A} Q^{*}(s,a)$. To enforce this under a quasimetric architecture, we enforce the same constraint by minimizing the MRN distance between the state encoder and state-action encoder:</p>
+                
+                <p style="text-align: center">$
+                    \mathcal{L}_{\mathcal{I}}\bigl(\phi, \psi;\{s_i,a_i,s'_i,g_i\}_{i=1}^N\bigr)
+                    = \sum_{i=1}^N \sum_{j=1}^N
+                      d_{\mathrm{MRN}}\bigl(\psi(s_i),\,\phi(s_i,a_j)\bigr)
+                    $.</p>                
             </section>
 
             <section>
@@ -228,6 +236,7 @@
                             </div>
                         </div>
                         <div class="half">
+                            <p>We additionally ablate our method, demonstrating the need of all three components that require a strong distance metric for policy learning.</p>
                             <img src="static/figures/t_ablation.svg" />
                             <div class="bottom">
                                 <figcaption title="Figure">
