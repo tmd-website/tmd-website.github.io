@@ -190,9 +190,15 @@
 
             <section>
                 <h2>What Do These Invariances Mean?</h2>
-                <p>An ideal distance metric should obey two properties: the <i>triangle inequality</i> and <i>action invariance</i>. We start by assuming that temporal distances between a pair of (state, action) and goal should be proportional to the optimal Q value</p>
-                <p>The temporal $\mathcal{T}$-invariance is represents Bellman consistency in temporal distance learning. We do so by regressing the </p>
-                <p>The optimal value function of a state is the maximum over all possible actions: $V^{*}(s) = \max_{a \in A} Q^{*}(s,a)$. To enforce this under a quasimetric architecture, we enforce the same constraint by minimizing the MRN distance between the state encoder and state-action encoder:</p>
+                <p>An ideal distance metric should obey two properties: the <i>triangle inequality</i> and <i>action invariance</i>, which correspond to Bellman optimality.</p>
+                <p>The $\mathcal{T}$-invariance is represents Bellman consistency in temporal distance learning. Instead of enforcing Bellman consistency straight up, we use the following objective to enforce the same constraint on quasimetric architecture:</p>
+                <p style="text-align: center">$
+                    e^{-d_{\mathrm{MRN}}\bigl(\phi(s,a),\,\psi(g)\bigr)}
+                    \;\leftarrow\;
+                    \mathbb{E}_{s'\sim P(\,\cdot\mid s,a)}\Bigl[
+                    e^{\log\gamma \;-\; d_{\mathrm{MRN}}\bigl(\psi(s'),\,\psi(g)\bigr)}
+                    \Bigr].$</p>
+                <p>The $\mathcal{I}$-invariance represents how optimal value and Q functions behave: $V^{*}(s) = \max_{a \in A} Q^{*}(s,a)$. To enforce this under a quasimetric architecture, we enforce the same constraint by minimizing the MRN distance between the state encoder and state-action encoder:</p>
                 
                 <p style="text-align: center">$
                     \mathcal{L}_{\mathcal{I}}\bigl(\phi, \psi;\{s_i,a_i,s'_i,g_i\}_{i=1}^N\bigr)
@@ -203,7 +209,7 @@
 
             <section>
                 <h2>Empirical Evaluation</h2>
-                <p>We evaluate TMD on OGBench, and we observe that TMD outperforms other methods in a variety of locomotion and manipulation tasks. </p>
+                <p>We evaluate TMD on OGBench, and we observe that TMD outperforms other methods in a variety of locomotion and manipulation tasks. Across a collection of <b>80 tasks</b>, we observe that TMD consistently outperforms TD-based methods such as GCIQL as well as distance learning methods such as QRL and CMD.</p>
                 <figure>
                     <div class="columns centered">
                         <div class="wide top">
