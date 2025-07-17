@@ -319,6 +319,30 @@ div.columns > .full {
   flex-basis: 90%;
 }
 
+div.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+div.grid > .fill {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+div.grid > .double {
+  grid-column: span 2;
+}
+
+div.grid > .triple {
+  grid-column: span 3;
+}
+
+div.grid > .quad {
+  grid-column: span 4;
+}
+
 .grow {
   flex-grow: 1;
 }
